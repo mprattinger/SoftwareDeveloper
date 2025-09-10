@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taschenrechner</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="w-full h-screen flex flex-col items-center justify-center bg-gray-100"
+  >
+    <div
+      class="border border-black p-4 bg-gray-200 rounded-lg shadow-md flex flex-col gap-y-2"
+    >
+      <div id="dspcalc" class="bg-gray-700 p-2 text-right text-white h-8"></div>
+      <input
+        type="text"
+        id="display"
+        class="border-b border-gray-700 bg-gray-100 rounded-xs text-right"
+      />
+      <div class="flex justify-between">
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('7')"
+        >
+          7
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('8')"
+        >
+          8
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('9')"
+        >
+          9
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-700 text-white w-10"
+          onclick="clearDisplay()"
+        >
+          C
+        </button>
+      </div>
+      <div class="flex justify-between">
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('4')"
+        >
+          4
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('5')"
+        >
+          5
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('6')"
+        >
+          6
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-700 text-white w-10"
+          onclick="addOperator('/')"
+        >
+          /
+        </button>
+      </div>
+      <div class="flex justify-between">
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('1')"
+        >
+          1
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('2')"
+        >
+          2
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('3')"
+        >
+          3
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-700 text-white w-10"
+          onclick="addOperator('*')"
+        >
+          *
+        </button>
+      </div>
+      <div class="flex justify-between">
+        <button
+          class="border border-gray-300 p-2 bg-gray-500 text-white w-10"
+          onclick="appendToDisplay('0')"
+        >
+          0
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-700 text-white w-10"
+          onclick="calculateResult()"
+        >
+          =
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-700 text-white w-10"
+          onclick="addOperator('+')"
+        >
+          +
+        </button>
+        <button
+          class="border border-gray-300 p-2 bg-gray-700 text-white w-10"
+          onclick="addOperator('-')"
+        >
+          -
+        </button>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/calc.js"></script>
+  </body>
+</html>
