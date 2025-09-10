@@ -1,0 +1,1 @@
+string name = "John"; //Statische Typedefinition in C#
